@@ -6,8 +6,7 @@ using namespace std;
 int main()
 {
 
-    Node parent[] = {Node("x+x"),Node("x*x"),Node("x*x+x"),Node("x*2"),Node("(x+x)*2")};
-
-    Solve solve(parent,sizeof (parent) / sizeof(parent[0]));
+    int originPrime[] = {2,3,5,7,11,13,17,19};
+    Solve solve(originPrime, sizeof(originPrime) / sizeof(originPrime[0]));
     return 0;
 }

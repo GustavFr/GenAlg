@@ -32,9 +32,10 @@ struct Node{
     void calc(){
         int N = sizeof(originPrime) / sizeof(originPrime[0]);
         for(int i = 0; i < N; ++i){
-            this->formula = StringReplacer(this->formula,"x",std::to_string(i+1));
-            char tmp[formula.length() + 1];
-            strcpy(tmp, formula.c_str());
+            std::string tmp_formula = StringReplacer(this->formula,"x",std::to_string(i+1));
+            std::cout << tmp_formula<< std::endl;
+            char tmp[tmp_formula.length() + 1];
+            strcpy(tmp, tmp_formula.c_str());
             this->error += abs(this->parse(tmp) - originPrime[i]);
         }
     }
